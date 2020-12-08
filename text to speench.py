@@ -11,11 +11,16 @@ def speak(text):
       # playsound(mpe_fp)
 
 
+print("What should i say..?")
+text = input("  > >  ")
+speak(text)
 
-if __name__ == '__main__' :
-    print("What should i say..?")
-    text = input("  > >  ")
-    speak(text)
+
+
+
+
+
+
 
 """
 
@@ -23,6 +28,11 @@ if __name__ == '__main__' :
 from pydub import AudioSegment
 from pydub.playback import play
 
-song = AudioSegment.from_wav("mp3.mp3")
+song = AudioSegment.from_wav("mp3.wav")
 play(song)
+
+
+
+from playsound import playsound
+playsound('audio.mp3')
 """
