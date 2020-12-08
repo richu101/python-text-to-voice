@@ -7,7 +7,8 @@ def speak(text):
         mpe_fp = BytesIO()
         tts = gTTS(text,lang='en')
         tts.save('mp3.wav')
-      #  tts.write_to_fp(mpe_fp)
+      #  tts.write_to_fp(mpe_fp)  # play then created audio
+
       # playsound(mpe_fp)
 
 
