@@ -13,7 +13,7 @@ def speak(text):
 
 
 print("What should i say..?")
-text = input("  > >  ")
+text = input("  > >  ") # input what you want to convert
 speak(text)
 
 
