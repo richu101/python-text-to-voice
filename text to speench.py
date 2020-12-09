@@ -9,7 +9,7 @@ def speak(text):
         tts.save('mp3.wav')
       #  tts.write_to_fp(mpe_fp)  # play then created audio
 
-      # playsound(mpe_fp)
+       playsound(mpe_fp)
 
 
 print("What should i say..?")
