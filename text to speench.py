@@ -4,7 +4,7 @@ from gtts import gTTS
 from playsound import playsound
 
 def speak(text):
-        mpe_fp = BytesIO()
+mpe_fp = BytesIO()
         tts = gTTS(text,lang='en')
         tts.save('mp3.wav')
       #  tts.write_to_fp(mpe_fp)  # play then created audio
