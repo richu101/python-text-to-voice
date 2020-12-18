@@ -1,6 +1,5 @@
 from pygame import mixer
 
-
 mixer.init()
 
 voice='C:\\Users\\Angela\\Desktop\\trail\\hello.mp3'
