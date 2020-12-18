@@ -3,6 +3,8 @@ from pygame import mixer
 
 mixer.init()
 
+voice='C:\\Users\\Angela\\Desktop\\trail\\hello.mp3'
+
 # Loading the song/
 
 def play_music(voice):
@@ -23,10 +25,11 @@ def play_music(voice):
 while True:
 
     print("Press 'p' to pause, 'r' to resume")
-    print("Press 'e' to exit the program")   
+    print("Press 'e' to exit the program")
+    play_music(voice)
     query = input(" ")
     
-    play_music(voice)
+   
     if query == 'p':
 
         # Pausing the music
@@ -40,5 +43,3 @@ while True:
         # Stop the mixer
         mixer.music.stop()
         break
-
-
