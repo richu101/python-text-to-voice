@@ -1,39 +1,42 @@
-
-from io import BytesIO
-from gtts import gTTS
-from playsound import playsound
-
-def speak(text):
-mpe_fp = BytesIO()
-        tts = gTTS(text,lang='en')
-        tts.save('mp3.wav')
-      #  tts.write_to_fp(mpe_fp)  # play then created audio
-
-       playsound(mpe_fp)
+from pygame import mixer
 
 
-print("What should i say..?")
-text = input("  > >  ") # input what you want to convert
-speak(text)
+mixer.init()
+
+# Loading the song/
+
+def play_music(voice):
+    """
+    This function is to play the drum audios in the drum sound audios
+
+    """
+    mixer.music.load(voice)
+
+    # Setting the volume
+    mixer.music.set_volume(0.7)
+
+    # Start playing the song
+    mixer.music.play()
 
 
+# infinite loop
+while True:
 
+    print("Press 'p' to pause, 'r' to resume")
+    print("Press 'e' to exit the program")   
+    query = input(" ")
+    
+    play_music(voice)
+    if query == 'p':
 
+        # Pausing the music
+        mixer.music.pause()
+    elif query == 'r':
 
+        # Resuming the music
+        mixer.music.unpause()
+    elif query == 'e':
 
-
-
-"""
-
-
-from pydub import AudioSegment
-from pydub.playback import play
-
-song = AudioSegment.from_wav("mp3.wav")
-play(song)
-
-
-
-from playsound import playsound
-playsound('audio.mp3')
-"""
+        # Stop the mixer
+        mixer.music.stop()
+        break
