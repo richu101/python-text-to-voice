@@ -1,10 +1,15 @@
 from pygame import mixer
+from gtts import gTTS
+
+#text to speech
+text='hello'                
+tts = gTTS(text, lang='en') 
+tts.save('file.mp3')
 
 mixer.init()
 
-voice='C:\\Users\\Angela\\Desktop\\trail\\hello.mp3'
-
-# Loading the song/
+voice=r'file.mp3'
+# Calling the file to voice 
 
 def play_music(voice):
    
