@@ -1,3 +1,4 @@
+import pygame
 from pygame import mixer
 from gtts import gTTS
 
@@ -23,10 +24,9 @@ def play_music(voice):
     # Start playing the song
     mixer.music.play()
     while True:
-        
+        print(pygame.mixer.get_busy)
         query = input("p to pose e to exit r resume ")
-        
-    
+        print(pygame.mixer.get_busy)
         if query == 'p':
 
             # Pausing the music
