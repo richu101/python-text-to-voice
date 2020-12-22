@@ -1,6 +1,7 @@
 from pygame import mixer
 from gtts import gTTS
 
+
 #text to speech
 
 
@@ -43,7 +44,7 @@ def play_music(voice):
 # infinite loop
 while True:
 
-    text = input("input the text to reed")                    
+    text = input("input the text to reed :: -- ")                    
     tts = gTTS(text, lang='en') 
     tts.save('file.mp3')
     play_music(voice)
