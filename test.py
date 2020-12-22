@@ -12,7 +12,7 @@ voice=r'file.mp3'
 def play_music(voice):
    
     """
-    This function is to play the drum audios in the drum sound audios
+    This function is to play the audios 
     """
     mixer.music.load(voice)
 
@@ -23,7 +23,7 @@ def play_music(voice):
     mixer.music.play()
     while True:
         
-        query = input("p to pose e to exit r resume ")
+        query = input("Press p to pause, r to resume, e to exit")
         
     
         if query == 'p':
@@ -43,7 +43,7 @@ def play_music(voice):
 # infinite loop
 while True:
 
-    text = input("input the text to reed")                    
+    text = input("Input the text to read: ")                    
     tts = gTTS(text, lang='en') 
     tts.save('file.mp3')
     play_music(voice)
